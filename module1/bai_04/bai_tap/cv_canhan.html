@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header_footer{
+            height: 100px;
+            background-color: plum;
+           text-align: center; 
+        }
+.content{
+    width: 100%;
+    height: 500px;
+
+}
+.left{
+    width: 50%;
+    float: left;
+    color: rebeccapurple;
+}
+.right{
+    width: 40%;
+    float: left;
+    border-left: 1px solid plum;
+    height: 100%;
+    padding-left: 20px;
+    color: pink;
+}
+
+    </style>
+</head>
+
+<body>
+    
+    <div>
+        <div class="header_footer">
+            <h1>Bảng CV cá nhân</h1>
+        </div>
+        <div class="content">
+            <div class="left">
+
+                <ul style="list-style-type: none;"> 
+                    <li>Họ và tên: Dương Quốc Huy</li>
+                    <li>Địa Chỉ: Nguyễn Tất Thành</li>
+                    <li>Số điện thoại: 0912345678</li>
+                    <li>Email: quochuy@gmail.com</li>
+                    <li><img style="width: 400px; height: 300px;" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBQVFBcVFRUYFxcXGxwaGhoZFxoZGBgXGhgYGRgYGxoaISwjGhwoHRkZJDUkKC0vMjIyGSI4PTgwPCwxMi8BCwsLBQUFDwUFDy8bFRsvLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vLy8vL//AABEIAKgBLAMBIgACEQEDEQH/xAAcAAEBAQEAAwEBAAAAAAAAAAAAAgEDBAYHBQj/xAA7EAABAwMCAwYEBAUEAwEBAAABAAIREiExA0EEIlETMmFxgZFCobHxBSPB0QYHM1LwFENicoKS4VMk/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APjKIiAiIgIiICIiAiIgIiICIiAiQkICLYQtQYioj0QtQSioj7oW/fZBKLSEIQYiQkICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIEQIAWhB7rRtv4IA/XKAfXK1u298LQMb3wPRBgHS91UZi990873wPSVRHW98CEExmL33x9VVOYuemw+foteImeuGkeK3UHemIkRETvn0+aCSMxc9Nh5X2wlORk9Onz2V6os6Yi0RFXhO+MzumoLGYi0RFXhO+M+KDlGfLCyM+WF0cLHEQIxVtEqSM7iB0naEHP8AZYFRHrZYfeyCUW/59ViAiIgIiICIiAiIgIiICIiAiIgIiICIiAiBAgItCNQOioDG31QbeucLdPIjN84Qa0Y2E+uy0YGwq9dvp+qaQu2MzvhVpDuxmvfG0f8A30QAIzy83jNo+n6q6SJ+Dm8do+mfVboju0x/UHejwp/WY8Fek2RywfzB34Ge7k73nyCDHAif9vmzzX+2fXyVajSKjBZzDmM82enva3yVNYCHUQ7nE9pS3M0xUbk3n0V0A10cxrEh4DQJJiJdczba3rActRhFRgsuOczDt7QN+9bos1GkVm7cc94fMYgfF3vRdnaYJ1KeYhwqDwGtFyJBquarDFifTH6YnUDbuEVNNmtggGk1XpdDRixQcdQd43Bgc14dMSRb4srk8Xd1pF9jjw3Xk6jLvAu4AS02DYIBgg3pNh4H35ajbvG4aJbsMTF9ig4EX6cudjb9RZSfa3vn7LoW3P8A1x0sJ9sqD72wds/dBHyt+6wKh72Ppn7qR7oMRb81iAiIgIiICIiAiIgIiICIiAiIgIiICIiDR7qhtvY+mfus/b91vTax/X7IA23sbdM/dUwd3ext0z91o2m1jcb5z62WsF2zy2MHrmJ9beSCtMdz4rmw2/zK6aQmmebnOPSffPp7ZotvpzyyTBG94v628l10BB055JeYIwbgXvsbeXzDdNtVMg6n5h7sjNMi4+LbHdPp0DagKp1vzY5JGYkXb8dox3St0WxRUTpE6p7okWiTc2pNhnvHpfuGU09pPDE6p7jXEGKajd2GEiM989LhGtDgaz2w7WB2RpiczLL12Df+h9b4topf2jhqjtQI0SGkGCCTLDMiAM3Bv16mWA11cITqm7GvNURV8WNOQRGe0PRdXtdptfUHcGTrAAtGoagMjvYZIdIsa/KA8bj2gN1a3N1Gh7QBplrXNMOguNNxTLd779Z41gA1Ky1zQ5gDWFo1GmCG1mnZstMzzQvL4hpYNUlruEnVaA8DV/MyS3O1tS1rj/is4tpb2zodw8vaBq/m/mzzFtpiqBqWtYDog/P4poA1JimGUhpbWLCmuBNmyHT8ULjrNHPimllI5a8Npqi+M+MeC/Q4ppHauAOnNP5xrjVmDaBbtP6ttmxhePxLI7UwRLW/mGqNSaSSLfH3+sA+KDwdQZ6UNiInDaZ/X7Lk4Yn+20Z8J/zC8nVF3kW5G3M800yR/wBsriRcxbkyd7DHnhByO09LR659fks6eX7/AKq+kW5TM72OPSygeFrHPrj0QT0RaPD5+qwIMREQEREBERAREQEREBERAREQEREALQsCoe9j6Z+6DW/oc+q1u0dDnfOPT5rB72NumfuqbtvY26d76ZQVpC4jMOzg2dj0t5q9AXbTcw6Qd7GY8xYeIUM+GeYUusMt7307ypnwzzCl2Mt7x+Xe9UHbhRdlNzzSHb2PdPi2w8R5LvwQ/p0x33S18XMfCY3ba3xR4LyeJ/DH6LeH7YGp7XalAEP0tMyWudvOdQNtbztw4UE9kSK2hzucVVMiXET4f1PU+KC/w7/b7Mt/qnl1CwnamkuHSxpvNP8AxXX8PIhnYUj84SNY6ZO1BbUBsTVTeafBOFlw0yQdYDVd+YO0lmCZn/3v0PiuvDgvDC4O4oDVdztOpLRYkGoDvd+/9p/5QE8JED/Thv8AWEjiTpH/AKU1AD+6uL9xVw9MP7AB06zJHE9nHxURWbkmqreKfFVfUDa6uMHbOuw6oLJioGpv+5Ejp2ZvmN1SXg9oXcbGt/tF7S2YqmWf7kCI/wDzMFBDQ387sQHk6rKhrjSa0CXU01uu4uqBwaT5xuq1pPEdmA9/aNrGqGNY3mMlhc+5r5Rg0k2zHXjCXt1O0ceLA1hA0nOaWEyDM6Zs8Q0RN2H1z8ScXN1hqP7Zo1W0s0jS5hgiXEsNqeTfm36h4/ENBdxFHO+W1teGhjIcA8sJdel8MbYcrj6ceKAq1wOZwDamQAxkFofSQbhjoY3wPv5X4gZGq17hqNDmBunpkDUYQC1tZoM0tlhzzEX6/pv/AIW4t+nqPdpdlofl0nULNANAAoL9TUAqDWS05NRFugesa+dT4iGNkQKWQWAxBw08o/yeDxc/HDBjDbCfZfqfivC6emNRvbNe4BgDdIEtEU0h2o5rS6G5hsVEen5usILquXkZAF55WFs26XPig4Rj4uXHSx+mVPText0z9Mrq62eXkERvIET558lBGJty2jJznz+iCOm9j6Z+6zpuqjG1j65+ynptb3z9kEotWICIiAiIgIiICIiAiIgIiICIiAq/b91gVD2sfXKB02scev2VjabcpgjfvRPrbyUjwtY53zj0t5qtPNrGl0zg2dMenzQWy1M8vK6HDfvAT628l9H/AJTfwb/qtRvF6zI0dEkMG2tqScjdrZvsbDEr55wGg7U1NPT0xL9TkAdhznktEecgea/qz8B/CWcJw+lw+mOXTaGz/c7LnmN3OknzQfzr/GXFHU/E9d7uR3a6jGuMUkabnaemHTYCWBpm1O3X8XhQA7SJ5Hy6lwpodzODajMDnBadqSOl/qH8w/4A4k8U7i+E0+1Zq1O1NKeZry0jULW7h46SQ4+Uej8D/DPHGlreF4ixfVpv0dRoMtIJDyykVMhkyDInog8Dhoq0a4Y/tHU0NYWO5gBUQ6BzCnB5Y6X7acA6Nf5TjqOp7INcx3MBzEPtDrb8pxYVe4fgf8tPxBw05azQ06nHUZqva95B5SW0NMEs5diCJ6L3H8H/AJVcPohoframoA4vLY0w0uIpyWFw5bcpBm/QAPkDgGhna/8A8xOq6DogOaYIqJ/M5aDAETZxta/6/wCHfw3xetAZw2roE601aDHFhAPMXPdqUtGmYpg3rdAsV9x/Cf4T4HhmgaXDabYMguFbgYianyQV4f4t/HHBaHINVmo+oMoY9lnHYuJDRG9yRItcIPQeB/ljxuo1xe7S4IufXGk5+o45gO5oFJuKXRzOthft8d/C/wCD/h7HP4rVcwvdUQ3U1GF5FwAzTdVAJqgWk+Aj1z8X/mZxnEx/pCzhQ3UDXdo7TDnB3dFWpa0OLgBIlt8r0p2o13au0uZx1WVnijpmRLqYOpvIdM3p9UHvf4j/ABtp8MNUcFwWnwgkN7fV0pfqOcZ5Wtzy89TnOGJFwvTPx38V4nWOq/W1HgSwN1Hl/OLGlrBysDwBqGgACmN14moWfnnSAc7tG1HW7MMAqddtZHMXTm9M+MePxFJdrFvO+sVHUDQxvNBpkxNVhMcpNswHj6zf6hFmkNBe6ZfJabXy4ivcwPfi8f1C3FLZc6ZM0zHi438pXTVgnUPfdyybBjeZocR/5Q0YELnrXL553BreZsUt7gONhZgi10HP+6nFAku9JjzNh4LmPD+29Xzj6BdNQyXTzGlsEYbZvToOXzUuzfm5REYFh9B80HMDp0Mz64Uj9D+qvz5uW0bW/TKnpvb2z90ErFR/T91KAiIgIiICIiAiIgIiICIiAiIg0Kh72Ppn7qVX7bfqg0e9jbpn7qxePihptfl730yo6eRx65/zCpu025TBG+Yn1sg/d/gjVa38Q4J2pzNbqNkf2c5gnwBIcv6oX8etMUkmnldDm5PeiY8eXyX1r+FP5udnps0uO03uhsN1mQS4C3Ow5NoJB9N0H2hF871P5vfh4DSG65qxOm0DJEkl2JEL1f8AFf5v674Zw+izhw+Y1dR3aWuAYADW8wuTVa8IPsnF8Vp6TC/Ue1jWgkuc4NAAEkyfAL0T8X/mjoNgcLpv4nmLXagBbpspu4mRU6G82ACAbr45x34xrcQ/T1OJ1Xu1QXUPLmu0smmR3Wiuxi1MW6+Np0h2kXgNfUS0s7M6Zvy10mBD8/8AGLYQe1fiX8VcXxgFbncRpO1SHN0m6mlpsaAIa5o7wI5+cuwehX4TJ1Awur44DVPMDqigGCQah8cVXsKD4rg2mdHtIY/tHFnYjTdpm47xY6Aa4Fp5dsTTyPy+1jSPakt7BrHNMEVVUvsQYAibE2xIdXF2oOerjo1jFDtRtFUTMtkdpAiLDszCzX1C9rq3u4yNWw0y9tM2JPJ8YAAAkchvieetDQ3tY4c9qY/04a6qIqLqdS1EinPedbq4mWA9oP8ATTqGOwAcXR3pjUsGSI/7n0DeL1S8age48R+aIZplzaMgkksuCAGCJxnE+Nxr57Rr3VfmCNJkimJFyWxYcm5n59OJcWtdUBw4dqf7cue+MzL8NBB2Eu9uGpLQ4/0WF9iKjqPiSPiwBcxAkjwgOHFOitrjTzNjTbNiBHMSPhby3kyfNcuIJFYPJ3YYJ2AgO8hMzedsx0dZry0UsLmip01u3Az/AORjwvhc34eWiGktEu75wY9e8Y6Z6hOsILgeXlbDRN7NIn05jO6h9iZ5eVth8VmkT595UfjIxDZLu8bjHiTfy3UH4qbiBJdnLZj1+SCT48vKMb4+uVnyt7/daN46CZ9Jj1+Sny6bx6wgz5W91Kr9t1KAiIgIiICIiAiIgIiICIiAiIEGj2VD2t7qQqHvZBo9rHO+fsqab2tymZwczFtx81DR62Ppn7q2/wDtym1+XP0ygvSyIgGl01YNnY8xjxVaORGS10h+CSDjzER4jyUNvGXgNNrgtyfl3vU+Kpt6Z5gGmwsW5OfDvdL+aC+H+AN5iapY7ukkEWg5LbbGRZdOGJ5GtJcZdOk6qHEgjljcthuzpAjZcWRyVczQHWbFTck+3eva58VbILWVQ5gq7tPaAXm2YHevbN8oO/DPILWtJu51Wi6qHEiIb4uby7GQPBdtB5FLGEskmdF9UvkRY0xLm8mxsvG07tbID2Am4gajJmbVbd4TIzcXV6ZlocRWxpPPjVZObV7d4TImbi6Dy+FeW0NYezBeSdPUJc59o5TQBccm19+l8I8tDRpnsRWSWapD3OMQKDQMCW7GTnp4rJIDr6rGkzqOkamnIvArj/kJkTPira4uDSJ12tJJe4PDtMZ/viLVc1pB8ZDrwjqQOyjR/Mv25a8kt7tEsEFsuBi8ubfEcuHcAD2IbpisS7XLHYmmmpli2STEm4WVOfHe4mk3c8P/ACwf/LBiTVa3mpaS+BzcSQbVdoAwe+++wjKCdMi50wBzip+tQRvAAc3OScnHrxlpksFTi++o+mncizxvcmei6XeQCXcQ6TDBVS0b46mO7aBnpzJLoBcdQ1EjTaXUgXJA2vaKdvRBD4NRHO6u+oYDLk3g/wBx67DHSda5eTzOkc4s0Xz6mwwI26U6TIJJNf8ATbNIN5jbwESf1jU+IE0mv+m2Ym4J6WwMn9QzVuXzzm3MO6LiTjHwjb5KdXJnmMC4wIgdNu70W6lqweQyOQTFpzfbxkyfNZqWLgeXHKJ+f1vugh283sLjAx9lJ97D0x9lTt/hsLdcZ+qk+1hbrj7oMPvZSt+SxAREQEREBERAREQEREBERAREQat/ZSqHtZBvn02+UqpxPS0Rm8SpHtb3Wt9rHO6DoNieXlMFuTmJjxt5KmmKSeTlMObN8xMeNjG2yhmbWNJmcGx6jcfNbp7U2MGaog2OJ8Pn6IL0yRQf6feh4m+YmPGxjbbrem4gsd/TN4feDBtaDg2MbHHXlp5bTc3kOinfF9x5Xwq0b0gcxky13dJ8DOSLbGcFB003QWnuOkxqfCYOYjra2xx1oOAIJhr6rajYGnaPhDYscxscdeWmcAXJcZY4GmffO3XxVtJwCQS6+kaoPhn0vB6ILLgCC6A8HleykafqGtixvbqteWyK4qB5Tp9mGetAiZg2kx6LncS0EsvfSNfNiPOfGPBaS5tTQTpg503Vy/5b4vCC9VwsHxI7o0uzgnxoEAkx1PhhRqEWGoRGQNOgz1LoNiepmL2QPLZAJ0QRcOLyXZxDfTbzysa4t7s6UgyXVEu/6w23/wBygPIhgeWtbmGUOcfF0Gx2v42ysd3Wh1LWEk8sF5yJN5ti8b2ys0XUlhb+XmXulwJt3YbaPCTfKzTd3S3lIJ53ElsgTYRbruZhAd3RhrS/wL9/GYHoJPtPwmIDat4rsDHoN8CSsacEC9XfcZHtHreVJ3OTV3jjfII3zdAOHUxEiJiqLx+5jwWHDqe7bMT/AJ5I8zUe8au9tvsRvm6PM1E3M97bf6oJ6xi2Yn0U9Y+a077+Oyw77+KDFi0rEBERAREQEREBERAREQEREBERAC0LFvzQb+2/6Kh4Xtvt5fVT+y3z6bfqgpvvY26Zx5ZVNMxMuABteW5+meijpPTaPGJWjabWsRnfN0Fg2bPMAHWFiBcm8eu4yjTZs8zRNhAcOt4xvuM+KxpiD3cw4TO/j6LWSKT3cw8T+nTwQaDZtUFsmwprAv4TG/RaCKdiyr/iNQD6x7hY0kUm7TJh/NH+Dw9kBw64NXfvT7R9PZBoil0AFki5pDxjAmfqFo7r6QHN/ucAHjyFX7qXOyTJdPeFm7bU/sms4Saru2LSA32Db+kIOgvUWisBt3PEFtiLAOPznyWTUbTqQ25eCKY6Q7A8beCjWNzVBMWLC0D1gXTUN+eDy2opA8JgR+qC23LYnUIbhwMNA2F8D0CzTJNAEvP9pBpA6ZHmcBQ7aqIptTTPhVG/ndZNm1RTfu01esfqg1t6R3jJ5LwPY7+HTKyZgZNXdHd26HfFlmzZiJOKavGd/KVgwJiJ2irx8UB24/5d0Y+vosdvtfAxv9Fm20T4T+6HfpPhKA7fa+BhYd9vBOvT5rEArERAREQEREBERAREQEREBERAREQEREGgrflb3REGg9LW91rPC1jnBREG6eRETeaoj5+CMIBEZ3Doj5+CIgNcBBFzNwRy/VaHCM7zSRyx5z6fqiIFdjeJM03pPzWnUsYNIMcoqpPuT81qIM7TvQaAQOUF0O9yfmgdmDRyxEu5uo9fZEQY1w+E02gmTfrjr0RjoIg0kAyZN/bFrIiCWOxHKR8Un9MLGnEWM5+iIgT7zlZPvOURBk/dYURAKIiAiIgIiICIiD//2Q==" alt=""></li>
+                </ul>
+                
+                
+                    
+            </div>
+            <div class="right">
+                
+                <ul style="list-style-type: none;">
+                    <li>Học vấn: 12/12</li>
+                    <li>Bằng Cấp: Đại học Duy Tân</li>
+                    <li>Kỹ Năng:Giao tiếp</li>
+                    <li>Kinh nghiệm:</li>
+                    <li>Định hướng phát triển bản thân</li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_footer">CV HuyDuong</div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .box {
+           width: 600px;
+           height: 300px;
+           float: left;
+           background-color: pink;
+       }
+       label {
+           width: 20%;
+           float: left;
+       }
+       .nhap{
+           width: 78%;
+           float: left;
+       }
+       .check {
+           width: 80%;
+           float: left;
+           color: orange;
+       }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <form>
+            <div class="box">
+                <legend style="background-color: brown; ">SỞ THÍCH CỦA BẠN</legend>
+                <div>
+                    <label>Họ và Tên</label>
+                    <input class="nhap" type="text" name="yourname">
+                </div>
+                <div>
+                    <label >Email</label>
+                    <input class="nhap" type="text" name="Email">
+                </div>
+                <div style="width: 100% ; float: left;">
+                        <label style="width: 20%;">Sở thích</label>
+                    <div class="check" >
+                        <input  type="checkbox" name="hobby" id="">Thể thao
+                        <input  type="checkbox" name="hobby" id="">Âm nhạc
+                        <input  type="checkbox" name="hobby" id="">Đọc sách
+                        <br>
+                        <input  type="checkbox" name="hobby" id="">Lướt web
+                        <input  type="checkbox" name="hobby" id="">Chơi game
+                        <input  type="checkbox" name="hobby" id="">Điện ảnh
+                        <br>
+                        <input  type="checkbox" name="hobby" id=""  class="hobby">Du lịch
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-primary">Reset</button>
+                
+            </div>
+        </form>
+    </fieldset>
+    
+    <!--  -->
+    <fieldset>
+        <form >
+            <div class="box">
+                <legend style="background-color: rgb(10, 152, 195); ">ĐĂNG KÝ HỌC VIÊN</legend>
+                <div>
+                    <label>Họ và Tên</label>
+                    <input class="nhap" type="text" name="yourname">
+                </div>
+                <div>
+                    <label >Ngày sinh</label>
+                    <input class="nhap" type="text" name="Email">
+                </div>
+                <div>
+                    <label >Giới tính</label>
+                    <input  type="radio" name="gioi_tinh">Nam
+                    <input  type="radio" name="gioi_tinh">Nữ
+                </div>
+                <div>
+                    <label for="">Địa chỉ</label>
+                    <textarea name="" id="" cols="30" rows="3"></textarea>
+                </div>
+                <div>
+                    <div>
+                        <label for="">Lớp</label>
+                    </div>
+                    <select name="" id="">
+                        <option value="">chọn lớp</option>
+                        <option value="">lớp 1</option>
+                        <option value="">lớp 2</option>
+                        <option value="">lớp 3</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Điện thoại</label>
+                    <input  type="text" name="dienThoai">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input  type="text" name="email">
+                </div>
+
+                
+                <button type="submit" class="btn btn-primary">Đăng ký</button>
+                <button type="reset" class="btn btn-primary">Nhập lại</button>
+                
+            </div>
+        </form>
+    </fieldset>
+</html>
