@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+
+        <input type="text" name="" id="gt1">
+        <input type="text" name="" id="gt2">
+        <br>
+        <input type="button" value="" onclick="sub()">Addition(+)
+        <input type="button" value="" onclick="subb()">Subtraction(-)
+        <input type="button" value="" onclick="subbb()">Multiplication(X)
+        <input type="button" value="" onclick="subbbb()">Division(/)
+        <!-- <button type="submit" onclick="click()" id="click2" value="2">Subtraction(-))</button>
+        <button type="submit" onclick="click()" id="click3" value="3">Multiplication(X)</button>
+        <button type="submit" onclick="click()" id="click4" value="4">Multiplication(X))</button> -->
+
+
+    </form>
+    
+</body>
+<script>
+    function sub(){
+        
+        var KetQua;
+        var gt1;
+        var gt2;
+        gt1 = document.getElementById('gt1').value;
+        gt2 = document.getElementById('gt2').value;
+
+        var Gt1 = parseInt(gt1);
+        var Gt2 = parseInt(gt2);
+       
+             KetQua = Gt1 + Gt2;
+            
+        
+        document.write("Ket Qua"+""+KetQua);
+    }
+    function subb(){
+        
+        var KetQua;
+        var gt1;
+        var gt2;
+        gt1 = document.getElementById('gt1').value;
+        gt2 = document.getElementById('gt2').value;
+
+        var Gt1 = parseInt(gt1);
+        var Gt2 = parseInt(gt2);
+       
+             KetQua = Gt1 - Gt2;
+            
+        
+        document.write("Ket Qua"+""+KetQua);
+    }
+    function subbb(){
+        
+        var KetQua;
+        var gt1;
+        var gt2;
+        gt1 = document.getElementById('gt1').value;
+        gt2 = document.getElementById('gt2').value;
+
+        var Gt1 = parseInt(gt1);
+        var Gt2 = parseInt(gt2);
+       
+             KetQua = Gt1 * Gt2;
+            
+        
+        document.write("Ket Qua"+""+KetQua);
+    }
+    function subbbb(){
+        
+        var KetQua;
+        var gt1;
+        var gt2;
+        gt1 = document.getElementById('gt1').value;
+        gt2 = document.getElementById('gt2').value;
+
+        var Gt1 = parseInt(gt1);
+        var Gt2 = parseInt(gt2);
+       
+             KetQua = Gt1 / Gt2;
+            
+        
+        document.write("Ket Qua"+""+KetQua);
+    }
+        </script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="">Amount</label>
+        <input type="text" name="" id="amount" >
+        <select name="" id="option1">
+            <option value="1">VietNam</option>
+            <option value="2">USD</option>
+        </select>
+        <select name="" id="option2">
+            <option value="1">VietNam</option>
+            <option value="2">USD</option>
+        </select>
+        <button type="submit" class="btn btn-primary" onclick="convert()">Convert</button>
+
+<script>
+    
+
+    function convert(){
+        var tien;
+    tien = document.getElementById('amount').value;
+    var gt1;
+    gt1 = document.getElementById('option1').value;
+    var gt2;
+    gt2 = document.getElementById('option2').value;
+    var tienChuyenDoi;
+        if(gt1=="1"&&gt2=="2"){
+            tienChuyenDoi= tien/23000
+        }else if(gt1 == "2" && gt2 == "1" ){
+            tienChuyenDoi= tien*23000
+        }
+        document.write("result"+""+tienChuyenDoi);
+    }
+
+</script>
+    </form>
+</body>
+</html>
