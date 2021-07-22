@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var BaiKiemTra = parseInt(prompt('diem bai kiem tra'));
+        var GiuaKy = parseInt(prompt('Diem giua ky'));
+        var CuoiKy = parseInt(prompt('Diem cuoi ky'));
+        var TB = (BaiKiemTra+GiuaKy+CuoiKy)/3;
+
+        if(TB>=8){
+            document.write('xep loai gioi');
+        }else if(TB>=6&&TB<8){
+            document.write('xep loại kha');
+        }else if(TB>=5&&TB<6){
+            document.write('xep loại Trung Binh');
+        }else{
+            document.write('xep loại Yeu');
+        }
+    </script>
+</body>
+
+</html>

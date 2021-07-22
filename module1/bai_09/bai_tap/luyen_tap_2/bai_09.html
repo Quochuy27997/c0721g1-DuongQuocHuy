@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let a = parseInt(prompt('nhap vao Canh a:'));
+        let b = parseInt(prompt('nhap vao Canh b:'));
+        let c = parseInt(prompt('nhap vao Canh c:'));
+
+        if (a > 0 && b > 0 && c > 0) {
+            if (a + b > c || b + c > a || a + c > b) {
+                document.write('Đây là 1 tam giac');
+            } else {
+                document.write('Đây k phải là 1 tam giác');
+            }
+        } else{document.write('Đây k phải là 1 tam giac');}
+    </script>
+</body>
+
+</html>

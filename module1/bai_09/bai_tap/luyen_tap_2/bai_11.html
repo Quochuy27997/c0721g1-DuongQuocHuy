@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Bậc 1: 4 triệu đồng/tháng 0%;
+Bậc 2: Trên 4 - 6 triệu đồng/tháng: 5%;
+Bậc 3: Trên 6 - 9 triệu đồng: 10%;
+Bậc 4: Trên 9 - 14 triệu đồng/tháng: 15%;
+Bậc 5: trên 14 - 24 triệu đồng/tháng: 20%;
+Bậc 6: Trên 24 - 44 triệu đồng/tháng: 25%;
+Bậc 7: Trên 44 - 84 triệu đồng/tháng: 30%;
+Bậc 8: Trên 84 triệu đồng: 35%. -->
+
+    <script>
+        let TienLuong = parseFloat(prompt('nhap so luong nhan duoc'))
+        let Thue;
+        if (TienLuong <= 4) {
+            Thue = TienLuong * 0/100;
+        } else if (TienLuong > 4 && TienLuong <= 6) {
+            Thue = (TienLuong-4)*(5/100);
+        } else if (TienLuong > 6 && TienLuong <= 9) {
+            Thue = (2*(5/100))+((TienLuong-6)*(10/100));
+        } else if (TienLuong > 9 && TienLuong <= 14) {
+            Thue = (2*(5/100))+(3*(10/100))+((TienLuong-9)*(15/100));
+        } else if (TienLuong > 14 && TienLuong <= 24) {
+            Thue = (2*(5/100))+(3*(10/100))+(5*(15/100))+((TienLuong-14)*(20/100));
+        } else if (TienLuong > 24 && TienLuong <= 44) {
+            Thue = (2*(5/100))+(3*(10/100))+(5*(15/100))+ (10*(20/100))+ ((TienLuong-24)*(25/100));
+        }else if (TienLuong > 44 && TienLuong <= 84) {
+            Thue = (2*(5/100))+(3*(10/100))+(5*(15/100))+ (10*(20/100))+ (10*(25/10))+ ((TienLuong-44)*(30/100));
+        }else if (TienLuong > 85 ) {
+            Thue = (2*(5/100))+(3*(10/100))+(5*(15/100))+ (10*(20/100))+ (10*(25/10))+ (40*(30/100)) + ((TienLuong-84)*(35/100));
+        }
+
+        document.write('tien Thue thu nhap la' + TienLuong/ Thue + 'VND');
+
+
+    </script>
+
+    
+</body>
+
+</html>

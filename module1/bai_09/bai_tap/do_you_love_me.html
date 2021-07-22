@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Do you love me?</div>
+    <input type="button" value="Yes" id="Yes" onclick="DongY()">
+    
+    <input type="button" value="No" id="No" onmouseover="Tuchoi()" >
+    <p id="hienThi"></p>
+    <script>
+        function DongY() {
+            document.getElementById('hienThi').innerText = '<3'
+        }
+        let width=window.innerWidth;
+        let height=window.innerHeight;
+        
+        let noObj = null;
+        noObj = document.getElementById('No');
+        function init() {
+            noObj = document.getElementById('No');
+            noObj.style.position = 'relative';
+            noObj.style.left = '0px';
+        }
+        function Tuchoi() {
+             
+            noObj.style.left = Math.random()*width+ 'px';
+            noObj.style.top = Math.random()*height+ 'px';
+        }
+        window.onload = init;
+
+    </script>
+</body>
+
+</html>

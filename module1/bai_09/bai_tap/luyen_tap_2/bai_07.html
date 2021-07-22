@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = parseFloat(prompt('nhap vao Canh a:'));
+        let b = parseFloat(prompt('nhap vao Canh b:'));
+        let c = parseFloat(prompt('nhap vao Canh c:'));
+        let delta = b * b - 4 * a * c;
+        if (a == 0) {
+            if (b == 0) {
+                if (c == 0) {
+                    document.write('pt vô so nghiem');
+                } else {
+                    document.write('pt vô nghiem');
+                }
+            } else {
+                document.write('pt có nghiem là' + (-c / b));
+            }
+        } else {
+
+            if (delta < 0)
+                document.write('pt vô nghiem');
+            else if (delta == 0)
+                document.write('pt co nghiem là:', -b / (2 * a));
+            else
+                document.write('pt có nghiem 1 là:' + (-b - Math.sqrt(delta)) / (2 * a) + 'pt có nghiem 2 là:' + (-b + Math.sqrt(delta)) / (2 * a));
+        }
+
+
+    </script>
+</body>
+
+</html>

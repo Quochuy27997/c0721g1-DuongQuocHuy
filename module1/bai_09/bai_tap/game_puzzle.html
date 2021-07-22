@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+​
+<body>
+
+<img src="Images/Hinh1a.png" id="carA" name="car" onclick="onchangeImage(1)" width="250 px" height="600 px">
+<img src="Images/Hinh2b.png" id="carB" onclick="onchangeImage(2)" width="250 px" height="600 px">
+<img src="Images/Hinh3c.png" id="carC" onclick="onchangeImage(3)" width="250 px" height="600 px">
+<img src="Images/Hinh1d.png" id="carD" onclick="onchangeImage(4)" width="250 px" height="600 px">
+<img src="Images/Hinh1e.png" id="carE" onclick="onchangeImage(5)" width="250 px" height="600 px">
+
+</body>
+<script>
+    let imgA = document.getElementById('carA');
+    let imgB = document.getElementById('carB');
+    let imgC = document.getElementById('carC');
+    let imgD = document.getElementById('carD');
+    let imgE = document.getElementById('carE');
+
+    function onchangeImage(check) {
+        switch (check) {
+            case 1: {
+                console.log("getAttribtute " + imgA.getAttribute("src"))
+                console.log("src " + imgA.src)
+
+                if (imgA.getAttribute("src") === "Images/Hinh1a.png") {
+                    imgA.src = "Images/Hinh2a.png";
+                } else if (imgA.getAttribute("src") === "Images/Hinh2a.png") {
+                    imgA.src = "Images/Hinh3a.png";
+                } else if (imgA.getAttribute("src") === "Images/Hinh3a.png") {
+                    imgA.src = "Images/Hinh1a.png";
+                }
+                checkImage();
+                break;
+            }
+
+            case 2: {
+                if (imgB.getAttribute("src") === "Images/Hinh1b.png") {
+                    imgB.src = "Images/Hinh2b.png";
+                } else if (imgB.getAttribute("src") === "Images/Hinh2b.png") {
+                    imgB.src = "Images/Hinh3b.png";
+                } else if (imgB.getAttribute("src") === "Images/Hinh3b.png") {
+                    imgB.src = "Images/Hinh1b.png";
+                }
+                checkImage();
+                break;
+            }
+
+            case 3: {
+                if (imgC.getAttribute("src") === "Images/Hinh1c.png") {
+                    imgC.src = "Images/Hinh2c.png";
+                } else if (imgC.getAttribute("src") === "Images/Hinh2c.png") {
+                    imgC.src = "Images/Hinh3c.png";
+                } else if (imgC.getAttribute("src") === "Images/Hinh3c.png") {
+                    imgC.src = "Images/Hinh1c.png";
+                }
+                checkImage();
+                break;
+            }
+
+            case 4: {
+                if (imgD.getAttribute("src") === "Images/Hinh1d.png") {
+                    imgD.src = "Images/Hinh2d.png";
+                } else if (imgD.getAttribute("src") === "Images/Hinh2d.png") {
+                    imgD.src = "Images/Hinh3d.png";
+                } else if (imgD.getAttribute("src") === "Images/Hinh3d.png") {
+                    imgD.src = "Images/Hinh1d.png";
+                }
+                checkImage();
+                break;
+            }
+
+            case 5: {
+                if (imgE.getAttribute("src") === "Images/Hinh1e.png") {
+                    imgE.src = "Images/Hinh2e.png";
+                } else if (imgE.getAttribute("src") === "Images/Hinh2e.png") {
+                    imgE.src = "Images/Hinh3e.png";
+                } else if (imgE.getAttribute("src") === "Images/Hinh3e.png") {
+                    imgE.src = "Images/Hinh1e.png";
+                }
+                checkImage();
+                break;
+            }
+        }
+    }
+
+    function checkImage() {
+        if (imgA.getAttribute("src") === "Images/Hinh1a.png" &&
+            imgB.getAttribute("src") === "Images/Hinh1b.png" &&
+            imgC.getAttribute("src") === "Images/Hinh1c.png" &&
+            imgD.getAttribute("src") === "Images/Hinh1d.png" &&
+            imgE.getAttribute("src") === "Images/Hinh1e.png") {
+            alert(" Hình A")
+        } else if (
+            imgA.getAttribute("src") === "Images/Hinh2a.png" &&
+            imgB.getAttribute("src") === "Images/Hinh2b.png" &&
+            imgC.getAttribute("src") === "Images/Hinh2c.png" &&
+            imgD.getAttribute("src") === "Images/Hinh2d.png" &&
+            imgE.getAttribute("src") === "Images/Hinh2e.png") {
+            alert(" Hình B")
+
+        }
+    }
+
+</script>
+</html>
