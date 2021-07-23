@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let numbers = parseInt(prompt('nhap vào 1 so:'));
+        let count = 0;
+
+        function check(ktra) {
+            // alert(ktra);
+            let N = 2;
+            let can = Math.sqrt(ktra);
+            for (N; N <= can; N++) {
+                if (ktra % N == 0) {
+                    return false;
+                }
+            } return true;
+        }
+        function dem(biendem) {
+            // alert(biendem);
+            let M = 2;
+            while (count < biendem) {
+                // alert(count);
+                if (check(M)) {
+                    count = count + 1;
+                    document.write(M + 'la so nguyen to'+'<br>');
+                } M++
+            }
+
+        }
+        dem(numbers);
+
+    </script>
+</body>
+
+</html>
