@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let so=parseInt(prompt('nhap vao 1 so đe tinh giai thừa:'));
+        let giai_thua=1;
+        if(so==0||so==1){
+            giai_thua=1;
+        }else if(so<0){
+            alert("Error!")
+        } else{
+            for(i=1;i<=so;i++){
+                giai_thua=giai_thua*i;
+            }
+        }document.write('giai thua cua'+so+'='+giai_thua);
+
+    </script>
+</body>
+</html>
