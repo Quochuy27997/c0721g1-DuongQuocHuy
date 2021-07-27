@@ -16,20 +16,19 @@
         if (phamvi) {
             soRamdom = Math.floor(Math.random() * phamvi);
 
-            if (soRamdom == nhapso) {
-                alert("Bạn đã đoán đung");
-            } else {
-                for (i = 0; i < 3; i++) {
+            
+                for (i = 0; i < 2; i++) {
                     if (soRamdom == nhapso) {
-                        
-                        
+                        alert("Chúc mừng bạn đã đoán đúng !");
+                        break;
+
                     }
                     alert("Bạn đoán sai số");
                     nhapso = Number(prompt("Nhập vào số muốn đoán"));
-                }alert("Bạn đã hết lượt đoán số ");
+                } alert("Bạn đã hết lượt đoán số ");
             }
 
-        }
+       
     </script>
 </body>
 
