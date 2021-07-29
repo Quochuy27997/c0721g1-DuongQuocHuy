@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = prompt('nhap vao do dai mang a')
+        let a = [];
+        for (i = 0; i < n; i++) {
+            a[i] = prompt('nhap vao gia tri mang');
+        }
+        let m = prompt('nhap vao do dai mang b')
+        let b = [];
+        for (i = 0; i < m; i++) {
+            b[i] = prompt('nhap vao gia tri mang');
+        }
+        let phanso = (a[a.length-1])/(b[b.length-1]);
+        let vitri = (a.length||b.length); 
+
+        document.write("Giá trị của phân số lớn nhất là: "+phanso+" có chỉ số là: "+vitri);
+        
+    </script>
+</body>
+
+</html>

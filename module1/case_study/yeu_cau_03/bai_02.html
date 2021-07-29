@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let n = prompt('nhap vao do dai mang a')
+        let a = [];
+        for (i = 0; i < n; i++) {
+            a[i] = parseInt(prompt('nhap vao gia tri mang'));
+        }
+        let m = prompt('nhap vao do dai mang b')
+        let b = [];
+        for (i = 0; i < m; i++) {
+            b[i] = parseInt(prompt('nhap vao gia tri mang'));
+        }
+        let c = [];
+        for (i = 0; i < b.length; i++) {
+            let check = a.includes(b[i]);
+            if (check == false) {
+                c.push(b[i]);
+            }
+        }
+        console.log(c);
+    </script>
+</body>
+
+</html>
