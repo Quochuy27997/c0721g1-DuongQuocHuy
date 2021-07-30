@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = prompt('nhap kích thước mãng số nguyên')
+        let arr = [];
+
+        for (i = 0; i < n; i++) {
+            arr[i] = prompt("nhap gia tri vao phan tu:" + i);
+
+        }
+        console.log(arr);
+        let c=null;
+        function daoMangSo() {
+
+            for (left = 0, right = arr.length-1; left < right; left++, right--) {
+                c = arr[left]
+                arr[left] = arr[right]
+                arr[right] = c
+            }
+
+        }
+        daoMangSo();
+        document.write("Đổi chỗ mảng số " + arr);
+
+    </script>
+    <!-- <script>
+        let n = parseInt(prompt("Nhập vào độ dài của mảng"));
+        let arr = [];
+        for (i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt("Nhập vào phần tử ở vị trí " + i));
+        }
+        let temp = null;
+        function reverse() {
+            for (left = 0, right = arr.length - 1; left < right; left++, right--) {
+                temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+            }
+        }
+        document.write(arr);
+        document.write("</br>");
+        reverse();
+        document.write(arr);
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let ten = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let sao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+        function check() {
+            console.log(nhapvao);
+            ktra=true;
+            for (let i = 0; i < ten.length-1; i++) {
+                if (nhapvao == ten[i]) {
+
+                    document.write(nhapvao + 'là ngôi sao thuộc chòm sao' + sao[i])
+
+                    break;
+                    ktra=false;
+
+                }
+            }
+            if(ktra){
+                document.write('k tìm tháy')
+            }
+        }
+
+        let nhapvao = prompt('nhap vao ten ngoi sao can tim');
+        check();
+    </script>
+</body>
+
+</html>

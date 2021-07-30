@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bài 5</title>
 </head>
-
 <body>
-    <script>
+    <ol>
+        <li>Cafe-15.000VND</li>
+        <li>Nước cam-35.000VND</li>
+        <li>Nước ép cà rốt-20.000VND</li>
+        <li>Nước ép cà chua-20.000VND</li>
+        <li>Nước suối-10.000VND</li>
+        <li>Nước dừa-35.000VND</li>
+        <li>chọn số 7 để đồng ý đặt món</li>
+    </ol>
 
-        let m = prompt("Nhập vào số phần tử của mảng");
-        let n = prompt("Nhập vào số phần tử con của 1 phần tử trong mảng");
-        let a = [[]];
-        for (i = 0; i < m; i++) {
-            a[i] = [];
-            for (j = 0; j < n; j++) {
-                a[i][j] = prompt("Nhập vào phần tử thứ " + j +" của mảng " + i + " trong mảng a");
-            }
+<script>
+    let goi_mon;
+    let total = 0;
+    do {
+        goi_mon = parseInt(prompt("Hãy gọi đồ uống bằng cách bấm số: "));
+        switch (goi_mon) {
+            case 1:
+                let SoLuong1 = parseInt(prompt("Hãy chọn số lượng: "));
+                total += (15000*SoLuong1);
+                break;
+            case 2:
+                let SoLuong2 = parseInt(prompt("Hãy chọn số lượng: "));
+                total += (35000*SoLuong2);
+                break;
+            case 3:
+                let SoLuong3 = parseInt(prompt("Hãy chọn số lượng: "));
+                total += (20000*SoLuong3);
+                break;
+            case 4:
+                let SoLuong4 = parseInt(prompt("Hãy chọn số lượng: "));
+                total += (20000*SoLuong4);
+                break;
+            case 5:
+                let SoLuong5 = parseInt(prompt("Hãy chọn số lượng: "));
+                total += (10000*SoLuong5);
+                break;
+            case 6:
+                let SoLuong6 = parseInt(prompt("Hãy chọn số lượng: "));
+                total += (35000*SoLuong6);
+                break;
+            case 7:
+                alert("Tổng cộng số tiền bạn phải thanh toán là: " + total + " VND");
+                alert("Cảm ơn bạn và hẹn gặp lại!!!");
+                break;
+            default:
+                alert("Vui lòng nhập số từ 1 đến 7")
         }
-        console.log(a);
-    </script>
+    } while (goi_mon !== 7);
+</script>
 </body>
-
 </html>

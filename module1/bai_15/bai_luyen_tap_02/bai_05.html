@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let mang_so = []
+        for (let i = 0; i < 3; i++) {
+            mang_so.push(Number(prompt("Nhập vào mảng số thư " + i)))
+        }
+        
+
+
+        function TimMin() {
+            let backup;
+            for (i = 0; i < mang_so.length; i++) {
+                backup = mang_so[0];
+                if (mang_so[i] < backup) {
+                    backup = mang_so[i];
+                }
+            } return backup;
+        }
+        let min = TimMin(mang_so);
+        document.write('so nho nhat trong day:' + min)
+    </script>
+</body>
+
+</html>

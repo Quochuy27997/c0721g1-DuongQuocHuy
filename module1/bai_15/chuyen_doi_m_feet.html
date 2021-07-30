@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="nhapso">
+        <input type="button" value="Feet" onclick="ChuyenSangFeet()">
+        <input type="button" value="Meters" onclick="ChuyenSangMeters()">
+    </div>
+    <script>
+
+        let ketQua = 0;
+        function ChuyenSangMeters() {
+            let giaTri = parseInt(document.getElementById("nhapso").value);
+            let ketQua = 0.305 * giaTri;
+            document.write(ketQua);
+        }
+        function ChuyenSangFeet() {
+            let giaTri = parseInt(document.getElementById("nhapso").value);
+            let ketQua = 3.279 * giaTri;
+            document.write(ketQua);
+        }
+
+    </script>
+</body>
+
+</html>
