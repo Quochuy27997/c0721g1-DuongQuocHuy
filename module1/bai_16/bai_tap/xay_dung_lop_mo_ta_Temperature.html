@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class C {
+            constructor(doC) {
+
+                this.doC = doC;
+
+            }
+            getDoC() {
+                return this.doC;
+            }
+
+            changeCtoF() {
+                if (this.doC > -273) {
+                    return (this.doC * 1.8) + 32
+                } else {
+                    return alert("Nhiệt độ *C phải lớn hơn -273")
+                }
+            }
+            changeCtoK() {
+                if (this.doC > -273) {
+                    return this.doC + 273.15
+                } else {
+                    return alert("Nhiệt độ *C phải lớn hơn -273")
+                }
+            }
+        }
+        let nhietDo = parseFloat(prompt('nhap nhiet do:'));
+        let doC = new C(nhietDo);
+        let F = doC.changeCtoF();
+        let K = doC.changeCtoK();
+        alert(doC + 'chuyen sang do F' + F + 'chuyen sang do K' + K);
+
+
+    </script>
+</body>
+
+</html>

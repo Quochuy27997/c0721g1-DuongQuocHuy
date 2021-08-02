@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class HCN {
+            constructor(chieudai, chieurong) {
+                this.chieudai = chieudai;
+                this.chieurong = chieurong;
+
+            }
+            getchieudai() {
+                this.chieudai;
+            }
+            getchieurong() {
+                this.chieurong;
+            }
+            dienTich() {
+                return this.chieudai * this.chieurong;
+            }
+            chuVi() {
+                return (this.chieudai + this.chieurong) * 2;
+            }
+        }
+
+        let a = new HCN(7, 10);
+        let b = a.dienTich();
+        let c = a.chuVi();
+        alert('dien tich' + b + 'chu vi' + c);
+
+    </script>
+</body>
+
+</html>
