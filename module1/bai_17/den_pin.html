@@ -14,18 +14,56 @@
             constructor(energy) {
                 this.energy = energy;
             }
-            getenergy(){
-               this.energy
+            setEnergy(energy){
+               this.energy=energy;
+            }
+            getEnergy(){
+                return this.energy;
             }
             getdecreaseEnergy(){
-                if(this.energy){
+                if(this.energy>0){
                     this.energy--;
                 }
             }
         }
         class FlashLamp{
-            constructor(status,battery)
+            constructor(status,pin){
+                this.status=status;
+                this.pin=pin;
+            }
+            setBatterry(){
+                this.pin=battery.setEnergy(energy)
+            }
+            light(){
+                if(this.status){
+                    alert('den pin dang bat')
+                    // pin.getdecreaseEnergy();
+                }else{
+                    alert('den pin dang tat')
+                }
+            }
+            getBatteryinfo(){
+               return this.pin;
+            }
+            turnOn(){
+                this.status=true;
+            }
+            turnOof(){
+                this.status=false;
+            }
+            
         }
+        let pin=new Battery();
+        pin.setEnergy(50);
+        let a = pin.getEnergy();
+        console.log(a);
+        pin.getdecreaseEnergy();
+        console.log(a);
+        let lamp=new FlashLamp(false);
+        lamp.light();
+        lamp.turnOn();
+        lamp.light();
+
     </script>
 </body>
 

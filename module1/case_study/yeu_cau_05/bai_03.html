@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let m = parseInt(prompt('nhap m'));
+        let n = parseInt(prompt('nhap m'));
+        let maTran = new Array();
+        for (i = 0; i < m; i++) {
+            maTran[i] = new Array();
+            for (j = 0; j < n; j++) {
+                maTran[i][j] = Math.floor((Math.random() * 10));
+            }
+        }
+        let min = maTran[0][0];
+        let max = maTran[1][1];
+        for (i = 0; i < maTran.length; i++) {
+            for (j = 0; j < maTran[i].length; j++) {
+                if (maTran[i][j] < min) {
+                    min = maTran[i][j];
+                }
+            }
+        }
+        for (i = 0; i < maTran.length; i++) {
+            for (j = 0; j < maTran[i].length; j++) {
+                if (maTran[i][j] > max) {
+                    max = maTran[i][j];
+                }
+            }
+        }
+        console.log(maTran);
+        document.write("Giá trị nhỏ nhất trong mảng này là: " + min + "<br>");
+        document.write("Giá trị lớn nhất trong mảng này là: " + max);
+
+    </script>
+</body>
+
+</html>

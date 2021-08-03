@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let string = prompt("Hãy nhập vào chuỗi : ");
+        let array = string.split("");
+        let result = [];
+        for (i = 0; i < array.length;) {
+            if (array[i] == " " && array[i + 1] == " " || array[0] == " " || array[length - 1] == " ") {
+                for (j = i; j < array.length; j++) {
+                    array[j] = array[j + 1];
+                }
+                array[array.length - 1] = "";
+            } else {
+                i++;
+            }
+        }
+
+        result.push(array[0].toUpperCase());
+        for (i = 1; i < array.length; i++) {
+            if (array[i - 1] = " ") {
+                result.push(array[i].toUpperCase());
+            } else {
+                result.push(array[i].toLowerCase());
+            }
+        }
+        // console.log(result.join(""));
+        console.log(result);
+        let string1=result.join();
+        let array1=string1.split(" ");
+        let max=array1[0].length;
+        
+       
+
+
+
+    </script>
+</body>
+
+</html>
