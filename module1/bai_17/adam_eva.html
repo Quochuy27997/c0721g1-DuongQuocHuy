@@ -1,0 +1,95 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam và eva</title>
+</head>
+<body>
+<script>
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        checkAplle(Apple) {
+            if (Apple.weight > 0) {
+                return true;
+            }
+        }
+
+        eat(apple) {
+            apple.decrease();
+            this.weight += 1;
+        }
+
+        say(voice) {
+            alert(voice);
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+    }
+
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+        decrease(){
+            this.weight-=1;
+        }
+        isEmpty(){
+            if(this.weight>0){
+                return false;
+            }
+            else {
+                return  true;
+            }
+        }
+        getWeightApple(){
+            return this.weight;
+        }
+    }
+    let Adam = new Human("A van dam",true,80);
+    let Eva = new Human("E thi va",false,60);
+    let apple =new Apple(10);
+    Adam.say("Hello Eva");
+    Eva.say("Chào Adam");
+    console.log("quả táo còn:  " +apple.getWeightApple()+ "kg")
+    while(!apple.isEmpty()){
+        console.log("Adam đã cắn 1 miếng táo");
+        Adam.eat(apple);
+        console.log("quả táo còn:  " +apple.getWeightApple()+ "kg")
+        console.log("Eva cắn 1  miếng táo");
+        Eva.eat(apple);
+        console.log("quả táo còn:  " +apple.getWeightApple()+ "kg")
+    }
+    console.log("Quả táo đã bị cắn hết")
+
+</script>
+</body>
+</html>
