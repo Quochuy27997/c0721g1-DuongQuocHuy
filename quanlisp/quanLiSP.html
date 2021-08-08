@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="text">
+    <input type="text" id="text1">
+    <input type="text" id="text2">
+    <input type="text" id="text3">
+    <input type="button" value="add" id="add" onclick="them()">
+    <p id="bang"></p>
+    <script>
+        class SanPham {
+            constructor(TenSP, NhaSX, GiaTien, SoLuong) {
+                this.TenSP = TenSP;
+                this.NhaSX = NhaSX;
+                this.GiaTien = GiaTien;
+                this.SoLuong = SoLuong;
+            }
+            getTenSP() {
+                return this.TenSP;
+            }
+            setTenSP(value) {
+                this.TenSP = value;
+            }
+            getNhaSX() {
+                return this.NhaSX;
+            }
+            setNhaSX(value) {
+                this.NhaSX = value;
+            }
+            getGiaTien() {
+                return this.GiaTien;
+            }
+            setGiaTien(value) {
+                this.GiaTien = value;
+            }
+            getSoLuong() {
+                return this.SoLuong;
+            }
+            setSoLuong(value) {
+                this.SoLuong = value;
+            }
+
+
+        }
+        let ObjSP = [];
+        let SP1 = new SanPham('Iphone X', 'Apple', 10, 10);
+        let SP2 = new SanPham('Iphone 11', 'Apple', 13, 10);
+        let SP3 = new SanPham('Samsung note10', 'Samsung', 9, 10);
+        ObjSP.push(SP1, SP2, SP3);
+        console.log(ObjSP);
+        function hienTHi() {
+            let table = "<table border= '1px' >" +
+                "<tr><th>Ten san pham</th>" +
+                "<th>Nha San Xuat</th>" +
+                "<th>Gia tien</th>" +
+                "<th>So Luong</th> </tr>"
+            for (i = 0; i < ObjSP.length; i++) {
+                table += "<tr>" +
+                    "<td>" + ObjSP[i].getTenSP() + "</td>" +
+                    "<td>" + ObjSP[i].getNhaSX() + "</td>" +
+                    "<td>" + ObjSP[i].getGiaTien() + "</td>" +
+                    "<td>" + ObjSP[i].getSoLuong() + "</td>" +
+                    "<td> <input type='button' value='sua' onclick='sua(" + i + ")'>" + "</td>" +
+                    "<td> <input type='button' value='xoa' onclick='xoa(" + i + ")'>" + "</td>" +
+                    "</tr>"
+            }
+            document.getElementById('bang').innerHTML = table;
+
+        }
+        hienTHi();
+        function them() {
+            let tenSp = document.getElementById('text').value;
+            let nhaSx = document.getElementById('text1').value;
+            let giaTien = document.getElementById('text2').value;
+            let soLuong = document.getElementById('text3').value;
+            let SanPhamthem = new SanPham(tenSp, nhaSx, giaTien, soLuong);
+
+            ObjSP.push(SanPhamthem);
+            hienTHi();
+        }
+
+        function sua(vitri) {
+            ObjSP[vitri].setTenSP(prompt('nhap ten sp muon sua:'))
+            ObjSP[vitri].setNhaSX(prompt('nhap ten nha san xuat muon sua:'))
+            ObjSP[vitri].setGiaTien(prompt('nhap gia tien sp muon sua:'))
+            ObjSP[vitri].setSoLuong(prompt('nhap so luong sp muon sua:'))
+            hienTHi();
+            alert("da sua doi");
+
+        }
+        function xoa(vitri) {
+            // cach1:
+            // ObjSP[vitri].setTenSP("")
+            // ObjSP[vitri].setNhaSX("")
+            // ObjSP[vitri].setGiaTien("")
+            // ObjSP[vitri].setSoLuong("")
+            // cach 2:
+
+            if (confirm('co muon xoa k')) {
+                ObjSP.splice(vitri, 1);
+                hienTHi();
+                alert("da xoa");
+            }
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
