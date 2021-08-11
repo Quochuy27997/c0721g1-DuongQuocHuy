@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let Tienluong=parseFloat(prompt('nhap so tien lương'));
+        let thueThuNhap=0;
+        let luongRong=0;
+        if(Tienluong>=15){
+            thueThuNhap=Tienluong*(20/100);
+            luongRong=Tienluong-thueThuNhap;
+            document.write('tien thue phai nop la'+thueThuNhap+'luong see nhan sau thue la'+luongRong);
+
+        }else if(Tienluong>=7||Tienluong<15){
+            thueThuNhap=Tienluong*(10/100);
+            luongRong=Tienluong-thueThuNhap;
+            document.write('tien thue phai nop la'+thueThuNhap+'luong see nhan sau thue la'+luongRong);
+
+        }else if(Tienluong<7){
+            thueThuNhap=Tienluong*(5/100);
+            luongRong=Tienluong-thueThuNhap;
+            document.write('tien thue phai nop la'+thueThuNhap+'luong see nhan sau thue la'+luongRong);
+        }
+    </script> -->
+    <script>
+        let a =prompt('nhap vao ky tu:');
+        a=a.toLowerCase();
+        switch(a){
+            case 'o':
+            case 'u':
+            case 'i':
+            case 'a':
+            case 'e':
+                alert('đây là nguyên âm');
+                break
+            default:
+                alert('đây là phụ âm');
+        }
+    </script>
+</body>
+</html>

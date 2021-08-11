@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mua vé số</title>
+</head>
+
+<body>
+    <h2>Xổ số</h2>
+    <div id="ht"></div>
+    <br>
+    <button type="button" onclick="muave()">Mua vé</button>
+
+    <button type="button" onclick="ketqua()">Xem kết quả</button>
+    <div id="ketqua"></div>
+    <script>
+        class Customer {
+            constructor(name, age, phone) {
+                this.ticket = [];
+                this.name = name;
+                this.age = age;
+                this.phone = phone;
+            }
+
+            buyTicket(ticket) {
+                if (this.ticket.length < 5) {
+                    this.ticket.push(ticket);
+                } else {
+                    alert('Bạn đã mua đủ số lượng vé số');
+                }
+            }
+        }
+
+        class Ticket {
+            constructor() {
+                this.number = [];
+            }
+
+            addNumber(number) {
+                if (this.number.length < 7 && number >= 0 && number < 100) {
+                    this.number.push(number);
+                } else {
+                    alert('Bạn đã nhập sai hoặc bạn đã nhập đủ 6 cặp số');
+                }
+            }
+        }
+
+        let customer = new Customer('Duong Quoc Huy', 24, '0901234567');
+        let input = '';
+
+        function muave() {
+            if (customer.ticket.length < 4) {
+                let a = prompt('Bạn có 2 lựa chon: ' + '\n' + 'Bấm 1 nếu bạn muốn tự chon số .' + '\n' +
+                    'Bấm 2 nếu bạn muốn hệ thống chọn số.');
+                if (a == 1) {
+                    let ticket = new Ticket();
+                    for (let i = 1; i < 7; i++) {
+                        let b = prompt('Nhập cặp số thứ ' + i);
+                        input += '<input type="number" value="' + b + '" readonly>';
+                        ticket.addNumber(b);
+                    }
+                    customer.buyTicket(ticket)
+                    input += '<br><br>';
+                    return document.getElementById('ht').innerHTML = input;
+                } else if (a == 2) {
+                    let ticket = new Ticket();
+                    for (let i = 1; i < 7; i++) {
+                        let n = Math.floor(Math.random() * 100);
+                        input += '<input type="number" value="' + n + '" readonly>';
+                        ticket.addNumber(n)
+                    }
+                    customer.buyTicket(ticket)
+                    input += '<br><br>';
+                    return document.getElementById('ht').innerHTML = input;
+                }
+            } else {
+                alert('Bạn đã mua đủ số vé trong ngày');
+            }
+
+        }
+
+        function ketqua() {
+            let arr = [];
+            let arrCount = [];
+            for (let i = 1; i < 7; i++) {
+                let n = Math.floor(Math.random() * 100);
+                arr.push(n);
+            }
+            for (let i = 0; i < customer.ticket.length; i++) {
+                let count = 0;
+
+                for (let j = 5; j >= 0; j--) {
+                    if (arr[j] == customer.ticket[i].number[j]) {
+                        count++
+                    } else {
+                        break;
+                    }
+                }
+
+                arrCount.push(count)
+
+            }
+            console.log(arrCount)
+            for (let i = 0; i < arrCount.length; i++) {
+                if (arrCount[i] == 6) {
+                    alert('Vé thứ ' + (i + 1) + ' đã trúng giải nhất');
+                } else if (arrCount[i] == 5) {
+                    alert('Vé thứ ' + (i + 1) + ' đã trúng giải nhì');
+                } else if (arrCount[i] == 3) {
+                    alert('Vé thứ ' + (i + 1) + ' đã trúng giải khuyến khích');
+                } else {
+                    alert('Vé thứ ' + (i + 1) + ' không trúng, Chúc bạn may mắn lần sau!!!');
+
+                }
+
+            }
+            document.getElementById('ketqua').innerHTML = arr;
+
+        }
+
+
+    </script>
+</body>
+
+</html>

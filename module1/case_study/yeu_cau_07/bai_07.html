@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .header{
+            height: 100px;
+            background-color: rgb(43, 50, 53);
+            text-align: center;
+            padding: 15px;
+        }
+        .topleft{
+            height: 10px;
+            width: 30px;
+            font-size: 90px;
+            text-align: center;
+        }
+        .content{
+            width: 1000px;
+            height: 460px;
+
+        }
+        .bentrai{
+            float: left;
+            background-color: rgb(114, 173, 207);
+            height: 460px;
+            width: 150px;
+        }
+        .left{
+            margin: 35px;
+            font-size: 15px;
+        }
+        .bentrai{
+
+        }
+        .footer{
+            height: 30px;
+            background-color: rgb(43, 50, 53);
+            text-align: center;
+            padding: 10px;
+            color: azure;
+        }
+        .topright{
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="topleft"><img width="100px" src="data:image/png;base64,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" alt=""></div>
+    <div class="topright"><h1>Hệ thông quản lí bài tập Casrstudy module 1</h1></div>
+</div>
+<div class="content">
+    <div class="bentrai">
+    <select class="left">
+        <option> Bài 1</option>
+        
+    </select>
+    <select class="left">
+        <option> Bài 2</option>
+       
+    </select>
+    <select class="left">
+        <option> Bài 3</option>
+        
+    </select>
+    <select class="left">
+        <option> Bài 4</option>
+        
+    </select>
+    <select class="left">
+        <option> Bài 5</option>
+       
+    </select>
+    </div>
+    <div></div>
+</div>
+<div class="footer">
+    <p>CodeGym-Hệ thống lập trình hiện đại</p>
+</div>
+</body>
+</html>
