@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = [];
+        let b = [];
+        for (i = 0; i < 2; i++) {
+            a.push(parseInt(prompt('nhap vao tu so')));
+            b.push(parseInt(prompt('nhap vao mau so')));
+        }
+        function maxFraction(a, b) {
+            if (a[0] * b[1] == a[1] * b[0]) {
+                document.write('hai phân số bằng nhau');
+            } else {
+                document.write('hai phân số không bằng nhau');
+            }
+        }
+        maxFraction(a, b);
+    </script>
+
+</body>
+
+</html>

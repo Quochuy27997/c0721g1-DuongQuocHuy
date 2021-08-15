@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="text">
+    <input type="text" id="text1">
+    <input type="text" id="text2">
+    <input type="text" id="text3">
+    <input type="text" id="text4">
+    <input type="text" id="text5">
+    <input type="button" value="add" id="add" onclick="themSo()">
+
+    <p id="bang"></p>
+    <script>
+        class SoTietKiem {
+            constructor(maSo, loaiTietKiem, tenKhachHang, cMND, ngayMoSo, soTienGui) {
+                this.maSo = maSo;
+                this.loaiTietKiem = loaiTietKiem;
+                this.tenKhachHang = tenKhachHang;
+                this.cMND = cMND;
+                this.ngayMoSo = ngayMoSo;
+                this.soTienGui = soTienGui;
+            }
+            getmaSo() {
+                return this.maSo;
+            }
+            setmaSo(value) {
+                this.maSo = value;
+            }
+            getloaiTietKiem() {
+                return this.loaiTietKiem;
+            }
+            setloaiTietKiem(value) {
+                this.loaiTietKiem = value;
+            }
+            gettenKhachHang() {
+                return this.tenKhachHang;
+            }
+            settenKhachHang(value) {
+                this.tenKhachHang = value;
+            }
+            getcMND() {
+                return this.cMND;
+            }
+            setcMND(value) {
+                this.cMND = value;
+            }
+            getngayMoSo() {
+                return this.ngayMoSo;
+            }
+            setngayMoSo(value) {
+                this.ngayMoSo = value;
+            }
+            getsoTienGui() {
+                return this.soTienGui;
+            }
+            setsoTienGui(value) {
+                this.soTienGui = value;
+            }
+
+        }
+        let ObjStk = [];
+
+        let so1 = new SoTietKiem('12345', '123131', 'duong Quoc Huy', '201756618', '24/3/2014', 10);
+        let so2 = new SoTietKiem('12345', '123131', 'duong Quoc Huy', '201756618', '24/3/2014', 10);
+        let so3 = new SoTietKiem('12345', '123131', 'duong Quoc Huy', '201756618', '24/3/2014', 10);
+
+        ObjStk.push(so1, so2, so3);
+
+        console.log(ObjStk);
+        function hienthi() {
+            let table = "<table border= '1px' >" +
+                "<tr><th>Ma So</th>" +
+                "<th>Loai Tiet Kiem</th>" +
+                "<th>Ho Ten Khach Hang</th>" +
+                "<th>CMND</th>" +
+                "<th>Ngay Mo So</th>" +
+                "<th>So Tien Gui</th> </tr>"
+            for (i = 0; i < ObjStk.length; i++) {
+                table += "<tr>" +
+                    "<td>" + ObjStk[i].getmaSo() + "</td>" +
+                    "<td>" + ObjStk[i].getloaiTietKiem() + "</td>" +
+                    "<td>" + ObjStk[i].gettenKhachHang() + "</td>" +
+                    "<td>" + ObjStk[i].getcMND() + "</td>" +
+                    "<td>" + ObjStk[i].getngayMoSo() + "</td>" +
+                    "<td>" + ObjStk[i].getsoTienGui() + "</td>" +
+                    "<td> <input type='button' value='xoa' onclick='xoa1(" + i + ")'>" + "</td>" +
+                    "</tr>"
+            }
+            document.getElementById('bang').innerHTML = table;
+
+        }
+        hienthi();
+        function themSo() {
+            let maSo = document.getElementById('text').value;
+            let loaiTietKiem = document.getElementById('text1').value;
+            let tenKhachHang = document.getElementById('text2').value;
+            let cMND = document.getElementById('text3').value;
+            let ngayMoSo = document.getElementById('text4').value;
+            let soTienGui = document.getElementById('text5').value;
+            let soThem = new SoTietKiem(maSo, loaiTietKiem, tenKhachHang, cMND, ngayMoSo, soTienGui);
+
+            ObjStk.push(soThem);
+            hienthi();
+        }
+        function xoa1(vitri) {
+            if (confirm('co muon xoa k')) {
+                ObjStk.splice(vitri, 1);
+                hienthi();
+                alert("da xoa");
+            }
+
+        }
+    </script>
+</body>
+
+</html>
