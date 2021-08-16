@@ -2,7 +2,7 @@ package _01_bai_java.thuc_hanh;
 
 import java.util.Scanner;
 
-public class chi_so_can_nang {
+public class ChiSoCanNang {
 
 
 

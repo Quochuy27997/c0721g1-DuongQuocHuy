@@ -2,7 +2,7 @@ package _01_bai_java.thuc_hanh;
 
 import java.util.Scanner;
 
-public class thuc_hanh_03 {
+public class ThucHanh03 {
     public static void main(String[] args) {
         float width;
         float height;
